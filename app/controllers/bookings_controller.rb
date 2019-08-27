@@ -10,6 +10,7 @@ class BookingsController < ApplicationController
     @booking.superhero = @superhero
     @booking.user = current_user
     if @booking.save
+      flash[:pop_alert] = "Your booking for #{@superhero.name} has been confirmed!"
       redirect_to superheroes_path
     else
       render :new
