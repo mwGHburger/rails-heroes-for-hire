@@ -1,16 +1,16 @@
 .banner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://wallpapersite.com/images/pages/pic_h/17351.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://wallpapersite.com/images/pages/pic_h/18516.jpg);
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 70vh;
   background-attachment: fixed;
 }
 
 .banner-text-box {
   position: absolute;
   width: 1140px;
-  top: 50%;
-  left: 50%;
+  top: 35%;
+  left: 55%;
   transform: translate(-50%, -50%);
   color: white;
 }
