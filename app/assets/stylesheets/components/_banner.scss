@@ -1,0 +1,23 @@
+.banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://wallpapersite.com/images/pages/pic_h/17351.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+.banner-text-box {
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.banner-text-box h1 {
+  font-size: 64px;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
