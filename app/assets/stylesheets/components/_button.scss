@@ -1,6 +1,6 @@
 .btn-red {
   color: white;
-  background-color: red;
+  background-color: #e62328;
   border: 1px solid #F4F4F4;
   opacity: 0.8;
   padding: 16px 32px;
@@ -10,9 +10,9 @@
 
 .btn-red:hover {
   font-size: 24px;
-  background-color: black;
+  background-color: #e62328;
   font-weight: bold;
-  color: red;
+  color: #fff;
 }
 
 .btn-white {
@@ -25,7 +25,7 @@
 
 }
 .btn-white:hover{
-  background-color: red;
+  background-color: #e62328;
   box-shadow: 0 9px #999;
   opacity: 0.8;
   color: white;
@@ -41,11 +41,11 @@
 
 .btn-gradient {
   color: white;
-  background-color: red;
-  border: solid 0.8px red;
+  background-color: #e62328;
+  border: solid 0.8px #e62328;
   padding: 16px 32px;
   border-radius: 4px;
-  box-shadow: 2px 8px 12px #FD1015;
+  // box-shadow: 2px 2px 4px #e62328;
   transition: all 0.3s ease 0s;
   font-size: 18px;
 }
