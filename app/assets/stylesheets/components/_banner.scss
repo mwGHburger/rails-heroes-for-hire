@@ -1,5 +1,5 @@
 .banner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://wallpapersite.com/images/pages/pic_h/18516.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://wallpapersite.com/images/pages/pic_h/17684.jpg);
   background-size: cover;
   background-position: center;
   height: 70vh;
@@ -21,3 +21,15 @@
   letter-spacing: 1px;
   font-weight: bold;
 }
+
+.banner-testimonial {
+  background-position: center;
+  background-color: $primary-dark;
+  height: 30vh;
+  padding: 54px;
+  color: $primary-white;
+
+}
+
+
+
