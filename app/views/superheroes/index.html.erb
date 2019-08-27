@@ -1,1 +1,7 @@
 <h1>Index all Superheroes</h1>
+
+<% @superheroes.each do |superhero| %>
+  <%= link_to superhero.name, superhero %>
+<% end %>
+<br>
+<%= link_to 'Back to Home', root_path  %>

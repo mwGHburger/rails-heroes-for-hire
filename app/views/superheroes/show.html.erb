@@ -1,0 +1,9 @@
+<h1><%= @superhero.name %></h1>
+
+<ul>
+<li><strong>Price: </strong>$<%= @superhero.price %></li>
+<li><strong>Description: </strong><%= @superhero.description %></li>
+<li><strong>Location: </strong><%= @superhero.location %></li>
+</ul>
+
+<%= link_to 'Back to Heroes', superheroes_path  %>
