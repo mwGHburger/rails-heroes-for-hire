@@ -13,6 +13,7 @@ class SuperheroesController < ApplicationController
 
   def create
     @superhero = Superhero.new(superhero_params)
+    @superhero.user = current_user
     if @superhero.save
       redirect_to superheroes_path
     else
