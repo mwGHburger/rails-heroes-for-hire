@@ -7,6 +7,26 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts 'Cleaning database...'
 Superhero.destroy_all
+User.destroy_all
+
+puts 'Assembling users...'
+
+users_attributes = [
+  {
+    name:         'Bruce',
+    email:        '3000@love.com',
+    password:     123456
+  },
+  {
+    name:         'Thane',
+    email:        'click@power.com',
+    password:     123456
+  }
+]
+
+User.create!(users_attributes)
+puts "Finished creating #{users_attributes.length} users!"
+
 puts 'Assembling superheroes...'
 
 superheroes_attributes = [
@@ -14,33 +34,38 @@ superheroes_attributes = [
     name:         'Batman',
     price:        1000,
     description:  'I am Batman.',
-    location:     'Gotham'
+    location:     'Gotham',
+    user_id:      User.first.id
   },
   {
     name:         'Superman',
     price:        200,
     description:  'I am Superman.',
-    location:     'Manhattan'
+    location:     'Manhattan',
+    user_id:      User.first.id
   },
   {
     name:         'Ironman',
     price:        3000,
     description:  'I am Ironman.',
-    location:     'California'
+    location:     'California',
+    user_id:      User.last.id
   },
   {
     name:         'Captain America',
     price:        1,
     description:  'I am Ironman.',
-    location:     'Canada'
+    location:     'Canada',
+    user_id:      User.first.id
   },
   {
     name:         'Hulk',
     price:        10000,
     description:  'GRRRRRRrrrrrr',
-    location:     'Laboratory'
+    location:     'Laboratory',
+    user_id:      User.last.id
   }
 ]
 
-Restaurant.create!(restaurants_attributes)
-puts "Finished creating #{restaurants_attributes.length} superheroes!"
+Superhero.create!(superheroes_attributes)
+puts "Finished creating #{superheroes_attributes.length} superheroes!"
