@@ -1,18 +1,20 @@
-.banner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://wallpapersite.com/images/pages/pic_h/17684.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 70vh;
-  background-attachment: fixed;
+
+.banner-carousel {
+  height: 95vh;
 }
 
 .banner-text-box {
   position: absolute;
   width: 1140px;
-  top: 35%;
+  top: 50%;
   left: 55%;
   transform: translate(-50%, -50%);
   color: white;
+
+  .banner-buttons {
+    color: $primary-red;
+    margin-top: 40px;
+  }
 }
 
 .banner-text-box h1 {
@@ -28,8 +30,8 @@
   height: 30vh;
   padding: 54px;
   color: $primary-white;
-
 }
+
 
 
 
