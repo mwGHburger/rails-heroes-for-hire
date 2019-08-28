@@ -129,18 +129,46 @@
   }
 }
 
-.superheroes-container {
+// -----------------------------------------------------
+
+.superhero-card-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
 }
 
-.container-index {
- display: flex;
- justify-content: space-around;
+.superhero-cards {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 100%;
 }
 
-.map {
+.superhero-cards > img {
+  height: 200px;
   width: 100%;
+  object-fit: cover;
+}
+
+.superhero-cards h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  padding: 16px;
+}
+
+// .superhero-cards p {
+//   font-size: 12px;
+//   opacity: .7;
+//   margin: 0;
+// }
+
+
+.map-image {
+  padding-left: 24px;
+
+  img {
+    height: 80vh;
+  }
 }
 
