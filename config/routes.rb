@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create]
   end
 
+  resources :users, only: [:index, :new, :create]
 
   if Rails.env.development?
     get 'kitchensink', to: 'pages#kitchensink'
