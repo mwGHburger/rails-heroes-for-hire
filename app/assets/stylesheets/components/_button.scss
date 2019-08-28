@@ -1,18 +1,19 @@
 .btn-red {
-  color: white;
-  background-color: #e62328;
-  border: 1px solid #F4F4F4;
-  opacity: 0.8;
-  padding: 16px 32px;
+  color: #e62328;
+  background-color: #fff;
+  border: 1px solid #e62328;
+  font-size:16px;
+  text-align:center;
+  padding: 4px 32px;
   transition: opacity 0.2s ease;
-  border-radius: 8px;
+  border-radius: 16px;
 }
 
 .btn-red:hover {
-  font-size: 24px;
+  color:white;
   background-color: #e62328;
   font-weight: bold;
-  color: #fff;
+  opacity: 1;
 }
 
 .btn-white {
