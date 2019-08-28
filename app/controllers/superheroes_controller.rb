@@ -15,7 +15,7 @@ class SuperheroesController < ApplicationController
     @superhero = Superhero.new(superhero_params)
     @superhero.user = current_user
     if @superhero.save
-      redirect_to superheroes_path
+      redirect_to superhero_path(@superhero)
     else
       render :new
     end
