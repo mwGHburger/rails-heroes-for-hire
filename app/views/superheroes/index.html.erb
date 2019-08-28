@@ -1,12 +1,12 @@
 <div class="container main-container">
-  <h1 mt-3>Index all Superheroes</h1>
+  <h1 class="mt-5">Find your Superhero</h1>
   <%= link_to 'Back to Home', root_path  %>
 
   <div class="d-flex mt-4">
     <div class="superhero-card-container">
       <% @superheroes.each do |superhero| %>
       <div class="superhero-cards">
-        <img src="https://wallpapersite.com/images/pages/pic_h/16811.jpg" />
+        <img src="https://cdn.dribbble.com/users/2538992/screenshots/6715962/03_dribbble.gif" />
         <h2><%= link_to superhero.name, superhero %></h2>
       </div>
       <% end %>

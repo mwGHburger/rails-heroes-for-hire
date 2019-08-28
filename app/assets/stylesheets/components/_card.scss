@@ -165,10 +165,11 @@
 
 
 .map-image {
-  padding-left: 24px;
-
-  img {
-    height: 80vh;
-  }
+  margin-top: -150px;
+  padding-left: 32px;
+  position: sticky;
+  height: 100vh;
+  top: 0;
 }
+
 
