@@ -53,50 +53,6 @@
 </div>
 
 
-<!-- indexpage -->
-<%=render 'navbar'  %>
-<%= render 'banner' %>
-
-<div class="index-container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <h1>All Superheroes</h1>
-  <div class="card" style="background-image: url(https://images.unsplash.com/photo-1531259683007-016a7b628fc3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80)">
-          <ul class="list-group">
-          <% @superheroes.each do |superhero| %>
-          <li class="list-group-item">
-            <%= superhero.name, superhero %>
-          </li>
-        <% end %>
-      </ul>
-    </div>
-      <div>
-        <%= link_to 'Back to Home', root_path  %>
-    </div>
-    </div>
-  </div>
-</div>
-
-<!-- form -->
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <%= simple_form_for(@superhero) do |f| %>
-        <%= f.input :name %>
-        <%= f.input :price %>
-        <%= f.input :description %>
-        <%= f.input :location %>
-        <%= f.submit "List Hero", class: "btn btn-primary" %>
-        <div id="messages">
-        <ul class="list unstyle" id="messages-list">
-         <li>You won't be charged for anything </li>
-        </ul>
-        <a class= "btn btn-gradient" href="#">Learn More</a>
-      </div>
-    </div>
-  </div>
-</div>
-
 
 
 
