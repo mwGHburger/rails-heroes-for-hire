@@ -1,34 +1,22 @@
-<div class ="show-container">
-  <%= render 'navbar' %>
-  <div class = "super-container">
-      <img src="https://wallpapersite.com/images/pages/pic_h/10860.jpg" alt="" width = "450">
-      <div class = "hero-card">
-        <div class = "row">
-        <div class = "col-8" >
-        <div class ="hero-form">
-          <h2> <%=superhero.price %></h2>
-          <%= simple_form_for(@superhero) do |f| %>
-          <%= f.input :name %>
-          <%= f.input :price %>
-          <%= f.input :description %>
-          <%= f.input :location %>
-          <%= f.submit "List Hero", class: "btn btn-primary" %>
-          <% end %>
-        </div>
-      <div class = show-image>
-        <img src="https://image.shutterstock.com/image-photo/las-vegas-usa-oct-10-600w-787820311.jpg" alt="">
-      </div>
-      <div class = "hero-description"></div>
-        <h1><%= @superhero.name %></h1>
-        <ul>
-        <li><strong>Price: </strong>$<%= @superhero.price %></li>
-        <li><strong>Description: </strong><%= @superhero.description %></li>
-        <li><strong>Location: </strong><%= @superhero.location %></li>
-        </ul>
-        <%= link_to 'Back to Heroes', superheroes_path  %>
-        <%= link_to 'Book this hero!', new_superhero_booking_path(@superhero)  %>
-      </div>
+    <div class = "show-container" style = "background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://wallpapersite.com/images/pages/pic_h/10860.jpg)" >
+      <div class = "heroes-card">
+
       </div>
     </div>
+
+    <div class = "hero-description">
+      <div class = hero-info>
+        <h1><%= @superhero.name %></h1>
+        <ul>
+          <li><strong>Price: </strong>$<%= @superhero.price %></li>
+          <li><strong>Description: </strong><%= @superhero.description %></li>
+          <li><strong>Location: </strong><%= @superhero.location %></li>
+          </ul>
+          <%= link_to 'Back to Heroes', superheroes_path  %>
+          <%= link_to 'Book this hero!', new_superhero_booking_path(@superhero)  %>
+        </div>
+        <img src="https://cdn.dribbble.com/users/2538992/screenshots/6715962/03_dribbble.gif" alt="" width = "250">
+      </div>
+  <div class= "footer-copyright">
+    Made by Wingit
   </div>
-</div>
