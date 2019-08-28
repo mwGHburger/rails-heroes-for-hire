@@ -1,0 +1,10 @@
+<h1>Welcome <%= current_user.name %> </h1>
+<h2>These heroes are coming to your rescue:</h2>
+<ul>
+<% current_user.bookings.each do |booking| %>
+  <li>
+    <h3><%= booking.superhero.name %></h3>
+    <p><%= booking.superhero.description %></p>
+  </li>
+<% end %>
+</ul>
