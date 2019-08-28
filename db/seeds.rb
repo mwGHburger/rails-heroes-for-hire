@@ -39,8 +39,8 @@ superheroes_attributes = [
   },
   {
     name:         'Superman',
-    price:        200,
-    description:  'I am Superman.',
+    price:        9000,
+    description:  'I like spandex.',
     location:     'Manhattan',
     user_id:      User.first.id
   },
@@ -53,17 +53,24 @@ superheroes_attributes = [
   },
   {
     name:         'Captain America',
-    price:        1,
-    description:  'I am Ironman.',
+    price:        1000000,
+    description:  'I love you 3000.',
     location:     'Canada',
     user_id:      User.first.id
   },
   {
     name:         'Hulk',
-    price:        10000,
-    description:  'GRRRRRRrrrrrr',
-    location:     'Laboratory',
+    price:        10,
+    description:  'The Hulk is a superhero appearing in publications by the American publisher Marvel Comics.',
+    location:     'New York',
     user_id:      User.last.id
+  },
+  {
+    name:         'Wonder Woman',
+    price:        2000,
+    description:  "Before she was Wonder Woman, she was Diana, princess of the Amazons, trained to be an unconquerable warrior.",
+    location:     "Madagascar",
+    user_id:      User.first.id
   }
 ]
 
