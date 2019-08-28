@@ -6,11 +6,22 @@
   overflow: hidden;
   height: 240px;
   width: 40%;
-  background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  border-radius: 8px;
+  border-radius: 4px;
+  transition: all .3s;
+  background-color: #f4f4f4;
+
+  &:hover {
+    transform: translateY(-4px); /* button moves up 3 pixels when hovered. Relative to initial state */
+    box-shadow: 0 8px 16px rgba(black, 0.2);
+
+  &::after {
+      transform: scaleX(1.5) scaleY(1.6); /* increase the size of the elememt */
+      opacity: 0;
+    }
+  }
 }
 
 .card-action-infos {
@@ -19,6 +30,7 @@
     font-size: 24px;
     font-weight: bold;
     margin: 0;
+    // color: $primary-white;
   }
 
   p {
@@ -27,23 +39,27 @@
     opacity: .7;
     margin-bottom: 24px;
     margin-top: 8px;
+    // color: $primary-white;
   }
 
-  a {
-    font-size: 14px;
-    line-height: 1.4;
-    background-color: #ec1e23;
-    padding: 8px 24px;
-    border-radius: 12px;
-    font-weight: bold;
-  }
+  // a {
+  //   font-size: 14px;
+  //   line-height: 1.4;
+  //   background-color: #ec1e23;
+  //   padding: 8px 24px;
+  //   border-radius: 4px;
+  // }
+
 }
 
 .card-action .card-action-infos {
   padding: 40px;
 
   a {
-    color: $primary-white;
+    color: $primary-red;
+    &:hover {
+      color: $primary-red;
+    }
   }
 }
 
@@ -98,7 +114,6 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  border-radius: 8px;
   color: $primary-dark;
   position: absolute;
   right: 100px;
@@ -114,6 +129,34 @@
   }
 }
 
+.card-superhero {
+  background-size: cover;
+  background-position: center;
+  width: 200px;
+  height: 150px;
+  border-radius: 1px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 22px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+.cards-superheroes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  flex-grow: 1;
+  margin: 16px;
+}
+
+.superheroes-container {
+  display: flex;
+  justify-content: center;
+}
 
 
 

@@ -1,9 +1,7 @@
 <h1>Book new hero</h1>
-<%= simple_form_for [@superhero, @booking] do |f| %>"
+<%= simple_form_for [@superhero, @booking] do |f| %>
   <%= f.input :hero_start_date, as: :string, input_html: {type: :date} %>
   <%= f.input :hero_end_date, as: :string, input_html: {type: :date} %>
   <%= f.submit "Book!"%>
 <% end %>
-
-
 
