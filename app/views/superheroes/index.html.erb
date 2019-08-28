@@ -1,17 +1,19 @@
-<h1>Index all Superheroes</h1>
+<div class="container main-container">
+  <h1 mt-3>Index all Superheroes</h1>
+  <%= link_to 'Back to Home', root_path  %>
 
-
-<%= link_to 'Back to Home', root_path  %>
-
-<div class="container superheroes-container">
-
-  <% @superheroes.each do |superhero| %>
-    <div class="cards-superheroes">
-      <div class="card-superhero" style="background-image: url(https://cdn.dribbble.com/users/2987584/screenshots/6030369/batman_4x.jpg)">
-        <%= link_to superhero.name, superhero %>
+  <div class="d-flex mt-4">
+    <div class="superhero-card-container">
+      <% @superheroes.each do |superhero| %>
+      <div class="superhero-cards">
+        <img src="https://wallpapersite.com/images/pages/pic_h/16811.jpg" />
+        <h2><%= link_to superhero.name, superhero %></h2>
       </div>
+      <% end %>
     </div>
-  <% end %>
-
-  <img id="map" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.3381,48.8693,10.45,0,0/600x1000?access_token=pk.eyJ1IjoiaGllbm5ndXllbjA2IiwiYSI6ImNqejNpZ2R4djAzdjczZHA5MzFjZ2VlaXoifQ.fYruwlhSoLNaTFc66KZLTg'>
+    <div class="map-image">
+      <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/1-buffalo-new-york-usa-dark-map-jurq-studio.jpg" alt="">
+    </div>
+  </div>
 </div>
+
