@@ -1,7 +1,14 @@
-<h1>Book new hero</h1>
-<%= simple_form_for [@superhero, @booking] do |f| %>
-  <%= f.input :hero_start_date, as: :string, input_html: { type: :date, min: Date.today, class: "date-min" } %>
-  <%= f.input :hero_end_date, as: :string, input_html: { type: :date, min: Date.today, class: "date-min-target" }  %>
-  <%= f.submit "Book!"%>
-<% end %>
 
+<div class="form-banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(https://wallpapersite.com/images/pages/pic_h/18062.jpg">
+
+  <div class="form-container row justify-content-center align-items-center p-4">
+    <div class="form mt-5">
+    <h1 class="mb-4 mt-5">Book new hero</h1>
+    <%= simple_form_for [@superhero, @booking] do |f| %>
+      <%= f.input :hero_start_date, as: :string, input_html: {type: :date, min: Date.today, class: "date-min" } %>
+      <%= f.input :hero_end_date, as: :string, input_html: {type: :date, min: Date.today, class: "date-min-target" } %>
+      <%= f.submit "Book!"%>
+    <% end %>
+    </div>
+  </div>
+</div>
