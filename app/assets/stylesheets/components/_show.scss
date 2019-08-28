@@ -2,12 +2,23 @@
   background-size: cover;
   background-position: center;
   height: 100vh;
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 
-.hero-description{
-  display:flex;
- justify-content:space-between;
+.hero-description {
+
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  color: $primary-white;
+
+  h1 {
+    font-size: 64px;
+  }
+
+  p {
+    font-size: 16px
+  }
 }
