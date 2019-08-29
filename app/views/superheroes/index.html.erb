@@ -11,7 +11,7 @@
     <% @superheroes.each do |superhero| %>
     <div class="hero-card mb-2">
       <div class="card-trip">
-        <img src="https://wallpapersite.com/images/pages/pic_h/15372.png" />
+        <img src="<%= cl_image_path superhero.photo, crop: :fill %>" alt="">
         <div class="card-trip-infos">
           <div>
             <h2><%= link_to superhero.name, superhero %></h2>

@@ -33,44 +33,58 @@ superheroes_attributes = [
   {
     name:         'Batman',
     price:        1000,
-    description:  'I am Batman.',
+    description:  'In the name of his murdered parents, Bruce Wayne wages eternal war on the criminals of Gotham City. He is vengeance. He is the night. He is Batman.',
     location:     'Gotham',
-    user_id:      User.first.id
+    user_id:      User.first.id,
+    remote_photo_url:        "https://wallpapersite.com/images/pages/pic_h/18395.jpg"
   },
   {
     name:         'Superman',
     price:        9000,
-    description:  'I like spandex.',
+    description:  'Faster than a speeding bullet, more powerful than a locomotive… The Man of Steel fights a never-ending battle for truth, justice, and the American way.',
     location:     'Manhattan',
-    user_id:      User.first.id
+    user_id:      User.first.id,
+    remote_photo_url:        "https://wallpapersite.com/images/pages/pic_h/15372.png"
   },
   {
     name:         'Ironman',
     price:        3000,
-    description:  'I am Ironman.',
+    description:  "Genius. Billionaire. Playboy. Philanthropist. Tony Stark's confidence is only matched by his high-flying abilities as the hero called Iron Man.",
     location:     'California',
-    user_id:      User.last.id
+    user_id:      User.last.id,
+    remote_photo_url:        "https://wallpapersite.com/images/pages/pic_h/15897.png"
   },
   {
     name:         'Captain America',
     price:        1000000,
-    description:  'I love you 3000.',
+    description:  'Recipient of the Super-Soldier serum, World War II hero Steve Rogers fights for American ideals as one of the world’s mightiest heroes and the leader of the Avengers.',
     location:     'Canada',
-    user_id:      User.first.id
+    user_id:      User.first.id,
+    remote_photo_url:        "https://wallpapersite.com/images/pages/pic_h/13244.jpg"
   },
   {
     name:         'Hulk',
     price:        10,
-    description:  'The Hulk is a superhero appearing in publications by the American publisher Marvel Comics.',
+    description:  'Exposed to heavy doses of gamma radiation, scientist Bruce Banner transforms into the mean, green rage machine called the Hulk.',
     location:     'New York',
-    user_id:      User.last.id
+    user_id:      User.last.id,
+    remote_photo_url:        "https://wallpapersite.com/images/pages/pic_h/13238.jpg"
   },
   {
     name:         'Wonder Woman',
     price:        2000,
-    description:  "Before she was Wonder Woman, she was Diana, princess of the Amazons, trained to be an unconquerable warrior.",
+    description:  "Beautiful as Aphrodite, wise as Athena, swifter than Hermes, and stronger than Hercules, Princess Diana of Themyscira fights for peace in Man's World.",
     location:     "Madagascar",
-    user_id:      User.first.id
+    user_id:      User.first.id,
+    remote_photo_url:        "https://wallpapersite.com/images/pages/pic_h/9523.jpg"
+  },
+  {
+    name:         'Saitama',
+    price:        2000,
+    description:  'Described as a "hero-for fun" - Saitama trained himself so hard that he unintentionally broke the natural limiter that prevents living beings from going beyond superhuman condition, Saitama faces an existential crisis as he is now too powerful to gain any thrill from his heroics.',
+    location:     "Madagascar",
+    user_id:      User.first.id,
+    remote_photo_url:        "https://wallpapersite.com/images/pages/pic_h/2376.jpg"
   }
 ]
 
