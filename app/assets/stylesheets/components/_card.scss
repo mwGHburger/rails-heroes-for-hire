@@ -1,75 +1,15 @@
-.container-card-action {
-  margin-top: -150px;
-}
-
-.card-action {
-  overflow: hidden;
-  height: 240px;
-  width: 40%;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-  border-radius: 4px;
-  transition: all .3s;
-  background-color: #f4f4f4;
-
-  &:hover {
-    transform: translateY(-4px); /* button moves up 3 pixels when hovered. Relative to initial state */
-    box-shadow: 0 8px 16px rgba(black, 0.2);
-
-  &::after {
-      transform: scaleX(1.5) scaleY(1.6); /* increase the size of the elememt */
-      opacity: 0;
-    }
-  }
-}
-
-.card-action-infos {
-
-  h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0;
-    // color: $primary-white;
-  }
-
-  p {
-    font-size: 16px;
-    line-height: 1.4;
-    opacity: .7;
-    margin-bottom: 24px;
-    margin-top: 8px;
-    // color: $primary-white;
-  }
-
-  // a {
-  //   font-size: 14px;
-  //   line-height: 1.4;
-  //   background-color: #ec1e23;
-  //   padding: 8px 24px;
-  //   border-radius: 4px;
-  // }
-
-}
-
-.card-action .card-action-infos {
-  padding: 40px;
-
-  a {
-    color: $primary-red;
-    &:hover {
-      color: $primary-red;
-    }
-  }
-}
-
-// ------------------------------------------------------------
 
 .card-trip {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 240px;
+  border-radius: 4px;
+  transition: transform .3s;
+
+  &:hover {
+      transform: translateY(-1.1rem) scale(1.03); //moves up. transition goes in parent element
+  }
 }
 
 .card-trip > img {
@@ -134,7 +74,7 @@
 .superhero-card-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 16px;
+  grid-gap: 32px;
 }
 
 .superhero-cards {
@@ -142,6 +82,11 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 100%;
+  transition: transform .3s;
+
+  &:hover {
+      transform: translateY(-1.1rem) scale(1.03); //moves up. transition goes in parent element
+  }
 }
 
 .superhero-cards > img {
@@ -156,13 +101,6 @@
   margin: 0;
   padding: 16px;
 }
-
-// .superhero-cards p {
-//   font-size: 12px;
-//   opacity: .7;
-//   margin: 0;
-// }
-
 
 .map-image {
   margin-top: -150px;

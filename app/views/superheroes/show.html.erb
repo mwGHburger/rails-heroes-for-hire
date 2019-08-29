@@ -1,13 +1,12 @@
-<div class = "show-container" style = "background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://wallpapersite.com/images/pages/pic_h/10860.jpg)" >
-  <div class="hero-description">
-    <div class="hero-info">
-      <h1><%= @superhero.name %></h1>
-          <p><strong>Price: </strong>$<%= @superhero.price %></p>
-          <p><strong>Description: </strong><%= @superhero.description %></p>
-          <p class="mb-5"><strong>Location: </strong><%= @superhero.location %></p>
-          <%= link_to 'Back to Heroes', superheroes_path, :class => "btn-ghost"  %>
-          <%= link_to 'Book this hero!', new_superhero_booking_path(@superhero), :class => "btn-ghost ml-3" %>
-     </div>
-  </div>
-</div>
+<div class="show-container" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://wallpapersite.com/images/pages/pic_h/5889.jpg);">
 
+    <div class="show-info">
+      <h1><%= @superhero.name %></h1>
+        <p><strong>Price: </strong>$<%= @superhero.price %></p>
+        <p><strong>Description: </strong><%= @superhero.description %></p>
+        <p class="mb-5"><strong>Location: </strong><%= @superhero.location %></p>
+        <%= link_to 'Back to Heroes', superheroes_path, class: "btn-ghost"  %>
+        <%= link_to 'Book this hero!', new_superhero_booking_path(@superhero), class: "btn-solid ml-3" %>
+    </div>
+
+</div>
