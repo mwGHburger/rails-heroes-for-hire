@@ -5,4 +5,3 @@ import { dateFormSelectInit } from './../components/date_form_select';
 popAlertsInit();
 dateFormSelectInit();
 
-
