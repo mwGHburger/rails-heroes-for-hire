@@ -1,0 +1,14 @@
+.title-name {
+  margin-bottom: 0px;
+  color: #E62328;
+  letter-spacing: 8px;
+  font-size: 22px;
+  text-shadow: 2.5px 2.5px rgba(200,200,200,0.3);
+}
+
+.nav-text {
+  color: rgba(255,255,255,1);
+  &:hover {
+    color: rgba(150,150,150,1);
+  }
+}
