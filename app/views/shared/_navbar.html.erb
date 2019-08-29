@@ -18,7 +18,7 @@
           <%= link_to "Dashboard", user_path(current_user), class: "nav-link", style: "color: white;" %>
         </li>
         <li class="nav-item dropdown">
-          <%= image_tag "https://pbs.twimg.com/profile_images/1018943227791982592/URnaMrya.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <%= cl_image_tag current_user.photo, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>

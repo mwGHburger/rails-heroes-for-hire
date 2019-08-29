@@ -15,12 +15,14 @@ users_attributes = [
   {
     name:         'Bruce',
     email:        '3000@love.com',
-    password:     123456
+    password:     123456,
+    remote_photo_url: "https://wallpapersite.com/images/pages/pic_h/17332.png"
   },
   {
-    name:         'Thane',
+    name:         'Stan',
     email:        'click@power.com',
-    password:     123456
+    password:     123456,
+    remote_photo_url: "http://screenrant.com/wp-content/uploads/stan-lee11.jpg"
   }
 ]
 
@@ -57,7 +59,7 @@ superheroes_attributes = [
   },
   {
     name:         'Captain America',
-    price:        1000000,
+    price:        1000,
     description:  'Recipient of the Super-Soldier serum, World War II hero Steve Rogers fights for American ideals as one of the world’s mightiest heroes and the leader of the Avengers.',
     location:     'Canada',
     user_id:      User.first.id,
@@ -81,7 +83,7 @@ superheroes_attributes = [
   },
   {
     name:         'Saitama',
-    price:        2000,
+    price:        9000,
     description:  'Described as a "hero-for fun" - Saitama trained himself so hard that he unintentionally broke the natural limiter that prevents living beings from going beyond superhuman condition, Saitama faces an existential crisis as he is now too powerful to gain any thrill from his heroics.',
     location:     "Madagascar",
     user_id:      User.first.id,
