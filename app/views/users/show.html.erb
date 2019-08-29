@@ -1,10 +1,19 @@
+<div class="container text-center">
 <h1>Welcome <%= current_user.name %> </h1>
 <h2>These heroes are coming to your rescue:</h2>
-<ul>
-<% current_user.bookings.each do |booking| %>
-  <li>
-    <h3><%= booking.superhero.name %></h3>
-    <p><%= booking.superhero.description %></p>
-  </li>
-<% end %>
-</ul>
+  <div class="d-flex mt-4 justify-content-center">
+    <div class="superhero-card-container">
+      <% current_user.bookings.each do |booking| %>
+      <div class="superhero-cards p3">
+        <div class="hero-img">
+          <%= cl_image_tag booking.superhero.photo, height: 300, width: 400, crop: :fill %>
+        </div>
+        <div class="hero-info p3">
+          <h1><%= booking.superhero.name %></h1>
+          <h4><%= booking.superhero.description %></h4>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
