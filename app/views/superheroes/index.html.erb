@@ -1,9 +1,19 @@
 <div class="show-page">
   <div class="show-banner">
     <div class="show-text">
-      <h1 class="mt-1">Search Superheroes</h1>
-      <p class="mb-5">Find a superhero near you</p>
-      <%= link_to 'Back', root_path, class: "btn-solid" %>
+      <h1 class="my-1">Search Superheroes</h1>
+      <h3 class="my-4">Find a <strong>superhero</strong> near you</h3>
+      <!-- Search for superheroes -->
+      <%= form_tag superheroes_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control search-form",
+          placeholder: "Find a superhero"
+        %>
+        <%= submit_tag "Search", class: "my-4 btn-solid btn-clean-border" %>
+      <% end %>
+      <!-- Commented out "Back" button -->
+      <%#= link_to 'Back', root_path, class: "btn-solid" %>
     </div>
   </div>
 

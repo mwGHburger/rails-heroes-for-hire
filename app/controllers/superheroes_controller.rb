@@ -1,6 +1,10 @@
 class SuperheroesController < ApplicationController
   def index
-    @superheroes = Superhero.all
+    if params[:query].present?
+      @superheroes = Superhero.where("name ILIKE ?", "%#{params[:query]}%")
+    else
+      @superheroes = Superhero.all
+    end
   end
 
   def show
