@@ -39,3 +39,27 @@
 
   }
 }
+
+.create-form-container {
+  background-color: $primary-dark;
+}
+
+.create-form-banner {
+  color: white;
+  background-color: $primary-dark;
+  padding: 8px;
+  margin-top: -54px;
+  text-align: center;
+
+  input textarea {
+    color: white;
+    border-radius: 4px;
+  }
+
+}
+
+.form-control {
+  border: none;
+}
+
+
