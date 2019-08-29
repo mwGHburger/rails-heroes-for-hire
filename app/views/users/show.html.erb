@@ -9,8 +9,12 @@
           <%= cl_image_tag booking.superhero.photo, height: 300, width: 400, crop: :fill %>
         </div>
         <div class="hero-info p3">
-          <h1><%= booking.superhero.name %></h1>
-          <h4><%= booking.superhero.description %></h4>
+          <h3><%= booking.superhero.name %></h3>
+          <p><%= booking.superhero.description %></p>
+          <p>
+            You have booked this hero for <strong><%= booking.number_of_nights %></strong> days from <%= Time.parse(booking.hero_start_date).strftime('%e %b %Y') %> to <%= Time.parse(booking.hero_end_date).strftime('%e %b %Y') %>
+          </p>
+          <p>Price of hire: <strong>$<%= number_with_precision(booking.total_price, :precision => 2, :delimiter => ',') %></strong></p>
         </div>
       </div>
       <% end %>
