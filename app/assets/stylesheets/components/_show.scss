@@ -9,20 +9,15 @@
 .show-info {
 
   position: absolute;
-  width: 1140px;
+  width: 450px;
   top: 50%;
-  left: 55%;
+  left: 30%;
   transform: translate(-50%, -50%);
   color: white;
 
   h1 {
   color: $primary-white;
   font-size: 64px;
-
-  }
-
-  p {
-  color: $primary-white;
 
   }
 }
