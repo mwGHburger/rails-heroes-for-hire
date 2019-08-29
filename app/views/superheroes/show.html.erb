@@ -2,9 +2,9 @@
 
     <div class="show-info">
       <h1><%= @superhero.name %></h1>
-        <p><strong>Price: </strong>$<%= @superhero.price %></p>
-        <p><strong>Description: </strong><%= @superhero.description %></p>
-        <p class="mb-5"><strong>Location: </strong><%= @superhero.location %></p>
+        <h5>$<%= @superhero.price %> per day</h5>
+        <p class="mt-4"><%= @superhero.description %></p>
+        <p class="mb-5"><i class="fas fa-map-marker-alt mr-2", style="color: #e62328;"></i><%= @superhero.location %></p>
         <%= link_to 'Back to Heroes', superheroes_path, class: "btn-ghost"  %>
         <%= link_to 'Book this hero!', new_superhero_booking_path(@superhero), class: "btn-solid ml-3" %>
     </div>
