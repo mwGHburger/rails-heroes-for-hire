@@ -16,6 +16,10 @@ gem 'uglifier'
 gem 'webpacker'
 # Adding the Devise Gem for user model creation
 gem 'devise'
+# Adding Cloudinary Gem
+gem 'cloudinary'
+# Adding Carrier Wave Gem
+gem 'carrierwave', '~> 1.2'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
