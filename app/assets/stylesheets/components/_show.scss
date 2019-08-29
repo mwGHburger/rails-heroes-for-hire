@@ -16,9 +16,15 @@
   color: white;
 
   h1 {
-  color: $primary-white;
-  font-size: 64px;
-
+    color: $primary-white;
+    font-size: 64px;
   }
 }
 
+#text {
+ display: block;
+ width: 100px;
+ overflow: hidden;
+ white-space: nowrap;
+ text-overflow: ellipsis;
+}

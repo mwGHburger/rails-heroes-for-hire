@@ -17,6 +17,7 @@
           <div class="card-trip-infos">
             <div>
               <h2><%= link_to superhero.name, superhero %></h2>
+              <p id="text"><%= superhero.description %></p>
             </div>
             <h2 class="card-trip-pricing">$<%= link_to number_with_precision(superhero.price, :precision => 2, :delimiter => ',') %></h2>
             <%= cl_image_tag superhero.user.photo, class: "card-trip-user avatar-bordered" %>
