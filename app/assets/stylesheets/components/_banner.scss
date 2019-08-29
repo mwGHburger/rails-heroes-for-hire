@@ -32,6 +32,30 @@
   color: $primary-white;
 }
 
+// --------------------------------------
 
+.show-banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://wallpapersite.com/images/pages/pic_h/16856.jpg);
+  background-attachment: fixed; /* keeps the image in the same place when scrolling */
+  background-size: cover; /* shows the whole image/background */
+  background-position: center;
+  height: 45vh; /* fill this header with 100% of the viewpoint. */
+  background-attachment: fixed;
+}
 
+.show-text {
+  position: absolute;
+  width: 1140px;
+  top: 30%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  color: white;
 
+  h1 {
+    font-size: 54px;
+  }
+
+  p {
+    font-size: 16px
+  }
+}
