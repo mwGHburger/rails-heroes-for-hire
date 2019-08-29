@@ -1,66 +1,5 @@
-.btn-red {
-  color: white;
-  background-color: #e62328;
-  border: 1px solid #F4F4F4;
-  opacity: 0.8;
-  padding: 16px 32px;
-  transition: opacity 0.2s ease;
-  border-radius: 8px;
-}
-
-.btn-red:hover {
-  font-size: 24px;
-  background-color: #e62328;
-  font-weight: bold;
-  color: #fff;
-}
-
-.btn-white {
-  background-color: #F4F4F4;
-  border: 2px solid red;
-  border-radius: 50px;
-  padding: 8px 32px;
-  cursor: pointer;
-  text-align: center;
-
-}
-.btn-white:hover{
-  background-color: #e62328;
-  box-shadow: 0 9px #999;
-  opacity: 0.8;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.btn-white:active{
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-
-.btn-gradient {
-  color: white;
-  background-color: #e62328;
-  border: solid 0.8px #e62328;
-  padding: 16px 32px;
-  border-radius: 4px;
-  // box-shadow: 2px 2px 4px #e62328;
-  transition: all 0.3s ease 0s;
-  font-size: 18px;
-}
-
-.btn-gradient:hover {
-  color: red;
-  font-style: italic;
-  background-color: white;
-}
-
-// ---------------------------------------------------------------
-
 .btn-ghost {
   color: $primary-red;
-  // background-color: $primary-red;
   border: 1px solid #ec1e23;
   padding: 8px 24px;
   border-radius: 4px;
@@ -73,6 +12,51 @@
     transform: translateY(-2px);
     box-shadow: 0 4px 4px rgba(#212629, 0.1);
     color: $primary-red;
+  }
+
+  &::after {
+    transform: scaleX(1.5) scaleY(1.6);
+    opacity: 0;
+  }
+}
+
+.btn-solid {
+  color: $primary-white;
+  background-color: $primary-red;
+  border: 1px solid #ec1e23;
+  padding: 8px 24px;
+  border-radius: 4px;
+  transition: opacity 0.3s ease;
+}
+
+.btn-solid:hover {
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 4px rgba(#212629, 0.1);
+    color: $primary-white;
+  }
+
+  &::after {
+    transform: scaleX(1.5) scaleY(1.6);
+    opacity: 0;
+  }
+}
+
+.btn-white {
+  color: $primary-white;
+  border: 1px solid #fff;
+  padding: 8px 24px;
+  border-radius: 4px;
+  transition: opacity 0.3s ease;
+}
+
+.btn-white:hover {
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 4px rgba(#212629, 0.1);
+    color: $primary-white;
   }
 
   &::after {
