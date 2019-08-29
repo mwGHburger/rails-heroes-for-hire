@@ -1,15 +1,31 @@
-const dateFormSelectInit = () => {
-  const dateMinInput = document.querySelector(".date-min");
-  const dateMinTargetInput = document.querySelector(".date-min-target");
+const log = console.log;
 
-  dateMinInput.addEventListener('change', (event) => {
-    const date = new Date(event.currentTarget.value);
-    // add a day
-    date.setDate(date.getDate() + 1);
-    dateMinTargetInput.setAttribute("min", date.toISOString().slice(0,10));
-    const diffTime = Math.abs(date.getTime() - new Date(event.currentTarget.value).getTime());
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-  });
+import flatpickr from 'flatpickr';
+import "flatpickr/dist/themes/dark.css";
+
+const formatNumber = (num) => {
+  return num.toFixed(2).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+}
+
+const dateFormSelectInit = () => {
+  flatpickr(".datepicker", {
+    altInput: true,
+    mode: "range",
+    dateFormat: "Y-m-d",
+    minDate: "today",
+    onClose: (selectedDates, dateStr, instance) => {
+      const form = instance.input.form
+      const diffTime = selectedDates[1] - selectedDates[0]
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1;
+
+      const daysDisplay = form.querySelector('.days-display')
+      const priceDisplay = form.querySelector('.price-display')
+      const totalPriceDisplay = form.querySelector('.total-price-display')
+
+      daysDisplay.innerText = diffDays
+      totalPriceDisplay.innerText = `$${formatNumber(diffDays * Number(priceDisplay.innerText.replace(/\,/g,'')))}`
+    }
+  })
 };
 
 export { dateFormSelectInit }

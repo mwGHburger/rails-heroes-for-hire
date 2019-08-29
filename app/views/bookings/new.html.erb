@@ -3,16 +3,23 @@
   <div class="form-banner">
     <img src="<%= cl_image_path @superhero.photo, crop: :fill %>" alt="">
 
-    <div class="form-info">
+    <div class="form-info py-4">
       <h1>Book new hero</h1>
       <%= simple_form_for [@superhero, @booking] do |f| %>
-        <%= f.input :hero_start_date, as: :string, input_html: {type: :date, min: Date.today, class: "date-min" } %>
-        <%= f.input :hero_end_date, as: :string, input_html: {type: :date, min: Date.today, class: "date-min-target" } %>
-        <%= f.submit "Book", class: "btn btn-primary btn-lg btn-block"%>
+        <%= f.input :date_range, input_html: { class: "datepicker start-date" } %>
+        <%#= f.input :hero_end_date, input_html: { class: "datepicker end-date" } %>
+        <div>
+          <strong><p class="my-0">Number of Days hired:</p></strong>
+          <span class="days-display">0</span>
+          <strong><p class="my-0">Hero price: (per Day)</p></strong>
+          $<span class="price-display"><%= @superhero.price.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse %></span>
+          <strong><p class="my-1">Total price:</p></strong>
+          <span class="total-price-display">$0</span>
+        </div>
+        <%= f.submit "Book", class: "btn btn-primary btn-lg btn-block" %>
       <% end %>
     </div>
 
 
   </div>
 </div>
-
