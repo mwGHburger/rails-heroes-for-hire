@@ -20,6 +20,8 @@ gem 'devise'
 gem 'cloudinary'
 # Adding Carrier Wave Gem
 gem 'carrierwave', '~> 1.2'
+# Adding Geocoder Gem
+gem 'geocoder'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

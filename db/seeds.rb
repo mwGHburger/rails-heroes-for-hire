@@ -37,7 +37,7 @@ superheroes_attributes = [
     name:         'Batman',
     price:        1000,
     description:  'In the name of his murdered parents, Bruce Wayne wages eternal war on the criminals of Gotham City. He is vengeance. He is the night. He is Batman.',
-    location:     'Gotham',
+    location:     'New York',
     user_id:      User.first.id,
     remote_photo_url:        "https://wallpapersite.com/images/pages/pic_h/18395.jpg"
   },
@@ -69,7 +69,7 @@ superheroes_attributes = [
     name:         'Hulk',
     price:        10,
     description:  'Exposed to heavy doses of gamma radiation, scientist Bruce Banner transforms into the mean, green rage machine called the Hulk.',
-    location:     'New York',
+    location:     'Boston',
     user_id:      User.last.id,
     remote_photo_url:        "https://wallpapersite.com/images/pages/pic_h/13238.jpg"
   },
@@ -85,7 +85,7 @@ superheroes_attributes = [
     name:         'Saitama',
     price:        9000,
     description:  'Described as a "hero-for fun" - Saitama trained himself so hard that he unintentionally broke the natural limiter that prevents living beings from going beyond superhuman condition, Saitama faces an existential crisis as he is now too powerful to gain any thrill from his heroics.',
-    location:     "Madagascar",
+    location:     "Tokyo",
     user_id:      User.first.id,
     remote_photo_url:        "https://wallpapersite.com/images/pages/pic_h/2376.jpg"
   }
