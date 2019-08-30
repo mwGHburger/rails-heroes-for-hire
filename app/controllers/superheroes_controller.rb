@@ -3,13 +3,26 @@ class SuperheroesController < ApplicationController
     if params[:query].present?
       @superheroes = Superhero.where("name ILIKE ?", "%#{params[:query]}%")
     else
-      @superheroes = Superhero.all
+      @superheroes = Superhero.geocoded
     end
+    # @superheroes = Superhero.geocoded #returns superheroes with coordinates
+    # @markers = @superheroes.map do |hero|
+    #   {
+    #     lat: hero.latitude,
+    #     lng: hero.longitude
+    #   }
+    # end
   end
 
   def show
     @superhero = Superhero.find(params[:id])
     @review = Review.new
+    @marker =
+      [{
+        lat: @superhero.latitude,
+        lng: @superhero.longitude,
+        image_url: helpers.asset_url('map-icon')
+      }]
   end
 
   def new
