@@ -1,31 +1,44 @@
-<div class="container text-center">
-<h1>Welcome <%= current_user.name %> </h1>
-<h2>These heroes are coming to your rescue:</h2>
-  <div class="d-flex mt-4 justify-content-center">
-    <div class="superhero-card-container">
-      <% current_user.bookings.each do |booking| %>
-      <div class="superhero-cards p3">
-        <div class="hero-img">
-          <%= cl_image_tag booking.superhero.photo, height: 300, width: 400, crop: :fill %>
-        </div>
-        <div class="hero-info p3">
-          <h3><%= booking.superhero.name %></h3>
-          <p><%= booking.superhero.description %></p>
-          <p>
-            You have booked this hero for <strong><%= booking.number_of_nights %></strong> days from <%= Time.parse(booking.hero_start_date).strftime('%e %b %Y') %> to <%= Time.parse(booking.hero_end_date).strftime('%e %b %Y') %>
-          </p>
-          <p>Price of hire: <strong>$<%= number_with_precision(booking.total_price, :precision => 2, :delimiter => ',') %></strong></p>
-        </div>
-      </div>
-      <% end %>
 
-      <h2>Your Enlisted Superheroes:</h2>
-      <% current_user.superheroes.each do |enlisted_superhero| %>
-        <%= cl_image_tag enlisted_superhero.photo, height: 300, width: 400, crop: :fill %>
-        <h3><%=  enlisted_superhero.name%></h3>
-        <p><strong>Description:</strong><%=  enlisted_superhero.description%></p>
-        <p><strong>Price(per day):</strong><%=  enlisted_superhero.price%></p>
-      <% end %>
+<div class="container-dashboard">
+
+<div class="dashboard">
+
+    <div class="dashboard-header">
+      <h1>Welcome <%= current_user.name %> </h1>
+    </div>
+
+    <div class="container-list">
+      <div class="dash-booking mr-4">
+        <h2 class="mb-3">Bookings</h2>
+        <% current_user.bookings.each do |booking| %>
+        <div class="card-product">
+          <%= cl_image_tag booking.superhero.photo, height: 300, width: 400, crop: :fill %>
+          <div class="card-product-infos">
+            <h2><%= booking.superhero.name %></h2>
+            <p id="text-dash"><%= booking.superhero.description %></p><br>
+            <p class="your-booking">You have booked this hero for <strong><%= booking.number_of_nights %></strong> days from <strong><%= Time.parse(booking.hero_start_date).strftime('%e %b %Y') %></strong> to <strong><%= Time.parse(booking.hero_end_date).strftime('%e %b %Y') %></strong></p>
+            <p><strong><p>Price of hire: $<%= number_with_precision(booking.total_price, :precision => 2, :delimiter => ',') %></strong></p>
+          </div>
+        </div>
+        <% end %>
+      </div>
+
+      <div class="dash-booking ml-4">
+        <h2 class="mb-3">Enlisted Superheroes</h2>
+        <% current_user.superheroes.each do |enlisted_superhero| %>
+          <div class="card-product ">
+              <%= cl_image_tag enlisted_superhero.photo, height: 300, width: 400, crop: :fill %>
+            <div class="card-product-infos">
+              <h2><%=  enlisted_superhero.name%></h2>
+              <p id="text-dash"><%=  enlisted_superhero.description%></p><br>
+              <p><strong>$<%=  enlisted_superhero.price%></strong> / per day</p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
     </div>
   </div>
+
+
 </div>
