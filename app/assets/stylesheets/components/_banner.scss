@@ -101,7 +101,22 @@
   }
 }
 
+.homepage-banner {
 
+  h3 {
+    color: white;
+    font-size: 60px;
+    width: 60%;
+    line-height: 40px;
+    letter-spacing: 2px;
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+}
 
 
 
