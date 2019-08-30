@@ -9,6 +9,7 @@ class SuperheroesController < ApplicationController
 
   def show
     @superhero = Superhero.find(params[:id])
+    @review = Review.new
   end
 
   def new
