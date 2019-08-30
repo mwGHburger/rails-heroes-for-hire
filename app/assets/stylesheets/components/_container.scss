@@ -18,3 +18,26 @@
   height: 100vh;
   width: 100%;
 }
+
+.container-map {
+  height: 100vh;
+  width: 100%;
+  background-color: $primary-dark;
+
+  h1 {
+    color: white;
+    padding-top: 64px;
+    font-size: 48px;
+  }
+
+  p {
+    color: white;
+  }
+}
+
+.inner-container {
+  background-color: $primary-dark;
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
