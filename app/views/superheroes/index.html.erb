@@ -2,7 +2,7 @@
   <div class="show-banner">
     <div class="show-text">
       <h1 class="my-1">Search Superheroes</h1>
-      <h3 class="my-4">Find a <strong>superhero</strong> near you</h3>
+      <h5 class="mb-5">Find a <strong>superhero</strong> near you</h5>
       <!-- Search for superheroes -->
       <%= form_tag superheroes_path, method: :get do %>
         <%= text_field_tag :query,
@@ -17,7 +17,7 @@
     </div>
   </div>
 
-  <div class="container heroes-container mt-5">
+  <div class="container heroes-container mt-5 pb-5">
     <% @superheroes.each do |superhero| %>
       <div class="hero-card mb-2">
 
@@ -36,6 +36,20 @@
 
       </div>
     <% end %>
+  </div>
+
+
+  <div class="footer">
+    <div class="footer-links">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="footer-copyright">
+      Made by WingIt
+    </div>
   </div>
 </div>
 
