@@ -18,6 +18,14 @@
         </div>
       </div>
       <% end %>
+
+      <h2>Your Enlisted Superheroes:</h2>
+      <% current_user.superheroes.each do |enlisted_superhero| %>
+        <%= cl_image_tag enlisted_superhero.photo, height: 300, width: 400, crop: :fill %>
+        <h3><%=  enlisted_superhero.name%></h3>
+        <p><strong>Description:</strong><%=  enlisted_superhero.description%></p>
+        <p><strong>Price(per day):</strong><%=  enlisted_superhero.price%></p>
+      <% end %>
     </div>
   </div>
 </div>
