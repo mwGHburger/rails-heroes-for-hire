@@ -1,6 +1,7 @@
 class Superhero < ApplicationRecord
   mount_uploader :photo, PhotoUploader
   has_many :bookings, dependent: :destroy
+  has_many :reviews
   belongs_to :user
 
   validates :name, presence: true, uniqueness: true
