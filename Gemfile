@@ -19,7 +19,7 @@ gem 'devise'
 # Adding Cloudinary Gem
 gem 'cloudinary'
 # Adding Carrier Wave Gem
-gem 'carrierwave', '~> 1.2'
+gem 'carrierwave', '~> 1.3'
 # Adding Geocoder Gem
 gem 'geocoder'
 
